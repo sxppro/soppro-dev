@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://github.com/sxppro/vega-lite">
+    <a href="https://github.com/sxppro/soppro-dev">
         <img src="public/nextjs.svg" alt="Sxppro user avatar" width="100" height="100">
     </a>
     <h1>soppro-dev</h1>
