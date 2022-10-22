@@ -6,20 +6,18 @@ import App from '../components/App';
 const Home: NextPage = () => {
   return (
     <ChakraProvider>
-      <div>
-        <Head>
-          <title>Soppro</title>
-          <meta
-            name="description"
-            content="Soppro's personal website - enjoy :)"
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+      <Head>
+        <title>Soppro</title>
+        <meta
+          name="description"
+          content="Soppro's personal website - enjoy :)"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <main>
-          <App />
-        </main>
-      </div>
+      <main>
+        <App />
+      </main>
     </ChakraProvider>
   );
 };

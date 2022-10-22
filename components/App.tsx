@@ -7,6 +7,7 @@ import {
   useColorMode,
   VStack,
   Box,
+  Link,
 } from '@chakra-ui/react';
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Header from './Header';
@@ -33,11 +34,13 @@ const App: FC = () => {
           <Spacer />
 
           {/* GitHub */}
-          <IconButton
-            aria-label="Display icon buttons"
-            ml={2}
-            icon={<FaGithub />}
-          ></IconButton>
+          <Link href="https://github.com/sxppro">
+            <IconButton
+              aria-label="Display icon buttons"
+              icon={<FaGithub />}
+            ></IconButton>
+          </Link>
+
           {/* LinkedIn */}
           <IconButton
             aria-label="Display icon buttons"
