@@ -34,7 +34,7 @@ const App: FC = () => {
           <Spacer />
 
           {/* GitHub */}
-          <Link href="https://github.com/sxppro">
+          <Link href="https://github.com/sxppro" target="_blank">
             <IconButton
               aria-label="Display icon buttons"
               icon={<FaGithub />}

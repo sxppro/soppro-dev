@@ -39,11 +39,10 @@ const Header: FC = () => {
             bgGradient="linear(to-tr, yellow.200 0%, orange.400 35%, purple.500 70%)"
             bgClip="text"
           >
-            Joshua Lu
+            Soppro
           </Text>
           <Text color={isDark ? 'gray.200' : 'gray.500'}>
-            Web & Blockchain Developer—React, Solidity, Web3. Partnerships @
-            MUBS
+            Web Developer—React, Vue, GraphQL, AWS
           </Text>
           <Button
             mt={8}
