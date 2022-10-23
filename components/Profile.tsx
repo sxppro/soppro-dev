@@ -4,7 +4,7 @@ import { FaNode, FaEthereum, FaReact } from 'react-icons/fa';
 
 const Profile: FC = () => {
   return (
-    <Stack direction={{ base: 'column', md: 'row' }} spacing={16} pt={8}>
+    <Stack direction={{ base: 'column', md: 'row' }} spacing={16} pt={24}>
       {/* Left box */}
       <Box alignSelf="center">
         <Heading

@@ -21,7 +21,7 @@ const Header: FC = () => {
         p={{ base: 4, md: 32 }}
         alignSelf="flex-start"
       >
-        <Box mt={{ base: 16, md: 0 }} mr={{ base: 0, md: 8 }}>
+        <Box mt={{ base: 16, md: 0 }} mr={{ base: 0, md: 16 }}>
           <Text fontSize="5xl" fontWeight="semibold">
             Hi, I am
           </Text>

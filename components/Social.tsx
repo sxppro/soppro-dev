@@ -1,13 +1,38 @@
 import type { FC } from 'react';
-import { HStack, Icon } from '@chakra-ui/react';
-import { FaGoogle, FaSpotify, FaShopify } from 'react-icons/fa';
+import Image from 'next/future/image';
+import { HStack, useBreakpointValue } from '@chakra-ui/react';
+import NextLogo from '../public/nextjs.svg';
+import Collab from '../public/collab.svg';
+import VercelLogo from '../public/favicon.ico';
 
 const Social: FC = () => {
+  const size = useBreakpointValue({
+    base: 75,
+    md: 100,
+  });
   return (
-    <HStack spacing={24}>
-      <Icon as={FaGoogle} boxSize="50"></Icon>
-      <Icon as={FaSpotify} boxSize="50"></Icon>
-      <Icon as={FaShopify} boxSize="50"></Icon>
+    <HStack spacing={16}>
+      <Image
+        src={NextLogo}
+        alt={'Next.js logo'}
+        width={size}
+        height={size}
+        quality={70}
+      />
+      <Image
+        src={Collab}
+        alt={'Next.js logo'}
+        width={size ? size / 2 : 50}
+        height={size ? size / 2 : 50}
+        quality={70}
+      />
+      <Image
+        src={VercelLogo}
+        alt={'Next.js logo'}
+        width={size}
+        height={size}
+        quality={70}
+      />
     </HStack>
   );
 };
