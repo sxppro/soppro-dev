@@ -1,18 +1,10 @@
 import type { FC } from 'react';
-import {
-  Circle,
-  Flex,
-  Stack,
-  Box,
-  Text,
-  useMediaQuery,
-} from '@chakra-ui/react';
+import { Circle, Flex, Stack, Box, Text } from '@chakra-ui/react';
 import { useColorMode, Button, Image } from '@chakra-ui/react';
 
 const Header: FC = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
-  const [isNotSmallerScreen] = useMediaQuery('(min-width: 600px)');
 
   return (
     <Stack>
@@ -25,11 +17,11 @@ const Header: FC = () => {
         alignSelf="flex-end"
       ></Circle>
       <Flex
-        direction={isNotSmallerScreen ? 'row' : 'column'}
-        p={isNotSmallerScreen ? 32 : 4}
+        direction={{ base: 'column', md: 'row' }}
+        p={{ base: 4, md: 32 }}
         alignSelf="flex-start"
       >
-        <Box mt={isNotSmallerScreen ? 0 : 16} mr={isNotSmallerScreen ? 4 : 0}>
+        <Box mt={{ base: 16, md: 0 }} mr={{ base: 0, md: 8 }}>
           <Text fontSize="5xl" fontWeight="semibold">
             Hi, I am
           </Text>
@@ -54,8 +46,8 @@ const Header: FC = () => {
         </Box>
         <Image
           alignSelf="center"
-          mt={isNotSmallerScreen ? 0 : 12}
-          mb={isNotSmallerScreen ? 0 : 12}
+          mt={{ base: 12, md: 0 }}
+          mb={{ base: 12, md: 0 }}
           borderRadius="full"
           backgroundColor="transparent"
           boxShadow="lg"
