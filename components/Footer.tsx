@@ -53,7 +53,7 @@ const Footer = () => (
         color="subtle"
         textAlign={{ base: 'center', md: 'left' }}
       >
-        &copy; {new Date().getFullYear()} Soppro. All rights reserved.
+        &copy; {new Date().getFullYear()} Joshua Lu. All rights reserved.
       </Text>
     </Stack>
   </Container>
