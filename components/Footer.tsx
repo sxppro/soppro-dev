@@ -1,39 +1,62 @@
+import Link from 'next/link';
 import {
-  Box,
+  ButtonGroup,
   Container,
+  IconButton,
   Stack,
   Text,
-  Link,
-  useColorModeValue,
+  Heading,
 } from '@chakra-ui/react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-const Footer = () => {
-  return (
-    <Box
-      as="footer"
-      role="contentinfo"
-      bg={useColorModeValue('gray.100', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}
-    >
-      <Container
-        as={Stack}
-        maxW={'6xl'}
-        py={4}
+const Footer = () => (
+  <Container
+    as="footer"
+    role="contentinfo"
+    py={{ base: '12', md: '16' }}
+    maxW={'container.xl'}
+  >
+    <Stack spacing={{ base: '4', md: '5' }}>
+      <Stack
+        justify="space-between"
         direction={{ base: 'column', md: 'row' }}
-        spacing={4}
-        justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}
+        align="center"
       >
-        <Stack direction={'row'} spacing={6}>
-          <Link>Home</Link>
-          <Link>About</Link>
-          <Link>Blog</Link>
-          <Link>Contact</Link>
-        </Stack>
-        <Text>© 2022 Joshua Lu. All rights reserved</Text>
-      </Container>
-    </Box>
-  );
-};
+        <Heading bgGradient={'linear(to-tr, #f9c58d, #f492f0)'} bgClip="text">
+          Soppro
+        </Heading>
+        <ButtonGroup variant="ghost">
+          <IconButton
+            as="a"
+            href="#"
+            aria-label="LinkedIn"
+            icon={<FaLinkedin fontSize="1.25rem" />}
+          />
+          <Link href={'https://github.com/sxppro'} target="_blank">
+            <IconButton
+              as="a"
+              href="#"
+              aria-label="GitHub"
+              icon={<FaGithub fontSize="1.25rem" />}
+            />
+          </Link>
+          <IconButton
+            as="a"
+            href="#"
+            aria-label="Twitter"
+            icon={<FaTwitter fontSize="1.25rem" />}
+          />
+        </ButtonGroup>
+      </Stack>
+      <Text
+        fontSize="sm"
+        color="subtle"
+        textAlign={{ base: 'center', md: 'left' }}
+      >
+        &copy; {new Date().getFullYear()} Soppro. All rights reserved.
+      </Text>
+    </Stack>
+  </Container>
+);
 
 export default Footer;
