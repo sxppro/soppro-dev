@@ -12,8 +12,8 @@ const Profile: FC = () => {
       {/* Left box */}
       <Box alignSelf="center">
         <Heading
+          color="#ff51eb"
           fontWeight="extrabold"
-          color="cyan.600"
           size="4xl"
           textAlign={'center'}
         >

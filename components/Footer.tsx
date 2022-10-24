@@ -22,7 +22,7 @@ const Footer = () => (
         direction={{ base: 'column', md: 'row' }}
         align="center"
       >
-        <Heading bgGradient={'linear(to-tr, #f9c58d, #f492f0)'} bgClip="text">
+        <Heading bgGradient={'linear(to-r, #f9c58d, #f492f0)'} bgClip="text">
           Soppro
         </Heading>
         <ButtonGroup variant="ghost">
