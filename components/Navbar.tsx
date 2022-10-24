@@ -27,26 +27,25 @@ const Navbar = () => {
       <Spacer />
 
       {/* GitHub */}
-      <Link href="https://github.com/sxppro" target="_blank">
-        <IconButton
-          aria-label="Display icon buttons"
-          icon={<FaGithub />}
-        ></IconButton>
+      <Link href="https://github.com/sxppro" target={'_blank'}>
+        <IconButton aria-label="Display icon buttons" icon={<FaGithub />} />
       </Link>
 
       {/* LinkedIn */}
-      <IconButton
-        aria-label="Display icon buttons"
-        ml={2}
-        icon={<FaLinkedin />}
-      ></IconButton>
+      <Link href="https://www.linkedin.com/in/joshua-lu/" target={'_blank'}>
+        <IconButton
+          aria-label="Display icon buttons"
+          ml={2}
+          icon={<FaLinkedin />}
+        />
+      </Link>
       {/* Toggle dark mode */}
       <IconButton
         aria-label="Display icon buttons"
         ml={8}
         icon={isDark ? <FaSun /> : <FaMoon />}
         onClick={toggleColorMode}
-      ></IconButton>
+      />
     </Flex>
   );
 };

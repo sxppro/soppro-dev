@@ -26,13 +26,14 @@ const Profile: FC = () => {
       {/* Right box */}
       <Box alignSelf="center">
         <Text fontSize="2xl" fontWeight="bold">
-          Full-stack web developer, passionate about UI and UX design
+          Full-stack web developer who also enjoys UI and UX design 😀
         </Text>
         <Stack
           direction={{ base: 'column', md: 'row' }}
           mt={8}
           px={{ base: 8, md: 0 }}
           justifyContent={'space-between'}
+          minH={{ md: '190px' }}
         >
           {/* 1st tile */}
           <Flex
@@ -41,7 +42,6 @@ const Profile: FC = () => {
             bg={'#ffafcc'}
             justify="flex-end"
             w={{ base: '100%', md: '30%' }}
-            h="100%"
           >
             <Icon as={FaNode} p="4" w="24" h="24" color={'blackAlpha.900'} />
             <Text
@@ -61,7 +61,6 @@ const Profile: FC = () => {
             bg={'#bde0fe'}
             justify="flex-end"
             w={{ base: '100%', md: '30%' }}
-            h="100%"
           >
             <Icon as={FaReact} p="4" w="24" h="24" color={'blackAlpha.900'} />
             <Text
@@ -81,7 +80,6 @@ const Profile: FC = () => {
             bg={'#a2d2ff'}
             justify="flex-end"
             w={{ base: '100%', md: '30%' }}
-            h="100%"
           >
             <Icon
               as={FaEthereum}

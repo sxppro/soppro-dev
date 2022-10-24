@@ -31,7 +31,7 @@ const Header: FC = () => {
             bgGradient="linear(to-tr, #84ffc9 0%, #aab2ff 35%, #eca0ff 70%)"
             bgClip="text"
           >
-            Soppro
+            Joshua Lu
           </Text>
           <Text color={isDark ? 'gray.200' : 'gray.500'}>
             Web Developer—React, Vue, GraphQL, AWS
