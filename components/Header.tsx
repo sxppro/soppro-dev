@@ -45,6 +45,8 @@ const Header: FC = () => {
           </Button>
         </Box>
         <Image
+          src={'/profile.png'}
+          alt="Profile picture of Soppro"
           alignSelf="center"
           mt={{ base: 12, md: 0 }}
           mb={{ base: 12, md: 0 }}
@@ -52,8 +54,6 @@ const Header: FC = () => {
           backgroundColor="transparent"
           boxShadow="lg"
           boxSize="300px"
-          src="https://linustechtips.com/uploads/monthly_2018_04/5ae41d9a07a20_Unicornbyryky(2).png.7e21b078da632b89e63ac1a1354accf8.png"
-          alt="Profile picture of Soppro"
         ></Image>
       </Flex>
     </Stack>

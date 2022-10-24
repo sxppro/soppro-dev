@@ -21,14 +21,14 @@ const Social: FC = () => {
       />
       <Image
         src={Collab}
-        alt={'Next.js logo'}
+        alt={'Collab x symbol'}
         width={size ? size / 2 : 50}
         height={size ? size / 2 : 50}
         quality={70}
       />
       <Image
         src={VercelLogo}
-        alt={'Next.js logo'}
+        alt={'Vercel logo'}
         width={size}
         height={size}
         quality={70}
