@@ -8,7 +8,7 @@ import Navbar from './Navbar';
 const App: FC = () => {
   return (
     <Container className="App" maxW={'container.xl'}>
-      <VStack p={4} w="100%">
+      <VStack p={4} w="100%" mb={24}>
         <Navbar />
         <Header></Header>
 

@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
+import Footer from '../components/Footer';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -14,6 +15,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
+      <Footer />
     </ChakraProvider>
   );
 };
