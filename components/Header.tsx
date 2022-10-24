@@ -28,7 +28,7 @@ const Header: FC = () => {
           <Text
             fontSize="6xl"
             fontWeight="bold"
-            bgGradient="linear(to-tr, yellow.200 0%, orange.400 35%, purple.500 70%)"
+            bgGradient="linear(to-tr, #84ffc9 0%, #aab2ff 35%, #eca0ff 70%)"
             bgClip="text"
           >
             Soppro
