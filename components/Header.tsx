@@ -1,5 +1,6 @@
 import type { FC } from 'react';
-import { Circle, Flex, Stack, Box, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { Circle, Flex, Stack, Box, Text, Link } from '@chakra-ui/react';
 import { useColorMode, Button, Image } from '@chakra-ui/react';
 
 const Header: FC = () => {
@@ -36,13 +37,11 @@ const Header: FC = () => {
           <Text color={isDark ? 'gray.200' : 'gray.500'}>
             Web Developer—React, Vue, GraphQL, AWS
           </Text>
-          <Button
-            mt={8}
-            colorScheme="purple"
-            onClick={() => window.open('https://soppro.dev')}
-          >
-            Contact Me
-          </Button>
+          <NextLink href="mailto:hello@soppro.dev">
+            <Button mt={8} colorScheme="purple">
+              Contact Me
+            </Button>
+          </NextLink>
         </Box>
         <Image
           src={'/profile.png'}
