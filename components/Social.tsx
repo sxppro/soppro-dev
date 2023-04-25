@@ -3,7 +3,7 @@ import Image from 'next/future/image';
 import { HStack, useBreakpointValue } from '@chakra-ui/react';
 import NextLogo from '../public/nextjs.svg';
 import Collab from '../public/collab.svg';
-import VercelLogo from '../public/favicon.ico';
+import SelfLogo from '../public/android-chrome-512x512.png';
 
 const Social: FC = () => {
   const size = useBreakpointValue({
@@ -14,21 +14,24 @@ const Social: FC = () => {
     <HStack spacing={16}>
       <Image
         src={NextLogo}
-        alt={'Next.js logo'}
+        alt={'Next.js'}
         width={size}
         height={size}
         quality={70}
       />
       <Image
         src={Collab}
-        alt={'Collab x symbol'}
+        alt={'X'}
         width={size ? size / 2 : 50}
         height={size ? size / 2 : 50}
         quality={70}
       />
       <Image
-        src={VercelLogo}
-        alt={'Vercel logo'}
+        style={{
+          borderRadius: '10%',
+        }}
+        src={SelfLogo}
+        alt={'Soppro'}
         width={size}
         height={size}
         quality={70}
