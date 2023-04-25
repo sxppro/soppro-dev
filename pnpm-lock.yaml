@@ -7,6 +7,7 @@ specifiers:
   '@types/node': 18.11.3
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
+  '@vercel/analytics': ^1.0.0
   eslint: 8.26.0
   eslint-config-next: 12.3.1
   framer-motion: ^7.6.1
@@ -20,6 +21,7 @@ dependencies:
   '@chakra-ui/react': 2.3.6_4a5gkdj7phvhqinmegnu2kpw7m
   '@emotion/react': 11.10.4_d3zi5agmim5yvele7myolzagti
   '@emotion/styled': 11.10.4_2x444vlcug5ivaeavo4vxooctq
+  '@vercel/analytics': 1.0.0_react@18.2.0
   framer-motion: 7.6.1_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_qtpcxnaaarbm4ws7ughq6oxfve
   react: 18.2.0
@@ -1810,6 +1812,14 @@ packages:
       '@typescript-eslint/types': 5.40.1
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@vercel/analytics/1.0.0_react@18.2.0:
+    resolution: {integrity: sha512-RQmj7pv82JwGDHrnKeRc6TtSw2U7rWNubc2IH0ernTzWTj02yr9zvIYiYJeztsBzrJtWv7m8Nz6vxxb+cdEtJw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@zag-js/element-size/0.1.0:
     resolution: {integrity: sha512-QF8wp0+V8++z+FHXiIw93+zudtubYszOtYbNgK39fg3pi+nCZtuSm4L1jC5QZMatNZ83MfOzyNCfgUubapagJQ==}

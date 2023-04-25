@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Analytics } from '@vercel/analytics/react';
 import Footer from '../components/Footer';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -16,6 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Component {...pageProps} />
       <Footer />
+      <Analytics />
     </ChakraProvider>
   );
 };
