@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   ButtonGroup,
   Container,
@@ -6,6 +5,7 @@ import {
   Stack,
   Text,
   Heading,
+  Link,
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
@@ -26,26 +26,24 @@ const Footer = () => (
           Soppro
         </Heading>
         <ButtonGroup variant="ghost">
-          <IconButton
-            as="a"
-            href="#"
-            aria-label="LinkedIn"
-            icon={<FaLinkedin fontSize="1.25rem" />}
-          />
-          <Link href={'https://github.com/sxppro'} target="_blank">
+          <Link href="https://www.linkedin.com/in/joshua-lu/" target="_blank">
             <IconButton
-              as="a"
-              href="#"
+              aria-label="LinkedIn"
+              icon={<FaLinkedin fontSize="1.25rem" />}
+            />
+          </Link>
+          <Link href="https://github.com/sxppro" target="_blank">
+            <IconButton
               aria-label="GitHub"
               icon={<FaGithub fontSize="1.25rem" />}
             />
           </Link>
-          <IconButton
-            as="a"
-            href="#"
-            aria-label="Twitter"
-            icon={<FaTwitter fontSize="1.25rem" />}
-          />
+          <Link href="https://twitter.com" target="_blank">
+            <IconButton
+              aria-label="Twitter"
+              icon={<FaTwitter fontSize="1.25rem" />}
+            />
+          </Link>
         </ButtonGroup>
       </Stack>
       <Text
