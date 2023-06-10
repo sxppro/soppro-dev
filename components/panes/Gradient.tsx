@@ -8,7 +8,9 @@ const Gradient = () => {
     const gradient = new GradientFactory();
     // @ts-expect-error: initGradient bubbles an event; it is not a method
     gradient.initGradient('#soppro-hero-gradient');
-    return () => {};
+    return () => {
+      gradient && gradient.disconnect();
+    };
   });
 
   return (
