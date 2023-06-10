@@ -32,7 +32,13 @@ const Directory = () => {
     >
       <VStack w={'inherit'} alignItems={'flex-start'} spacing={8} px={6}>
         {links.map((link) => (
-          <Link as={NextLink} key={link.label} href={link.to} fontSize={'6xl'}>
+          <Link
+            as={NextLink}
+            key={link.label}
+            href={link.to}
+            fontSize={'6xl'}
+            color={'white'}
+          >
             {link.label}
           </Link>
         ))}
