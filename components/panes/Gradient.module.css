@@ -1,0 +1,8 @@
+.gradient {
+  width: 100%;
+  height: 100%;
+  --gradient-stop-1: #a960ee;
+  --gradient-stop-2: #ff333d;
+  --gradient-stop-3: #90e0ff;
+  --gradient-stop-4: #ffcb57;
+}

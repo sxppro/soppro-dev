@@ -4,6 +4,10 @@ import NextLink from 'next/link';
 
 const links = [
   {
+    label: 'Home',
+    to: '/',
+  },
+  {
     label: 'Work',
     to: '/work',
   },
