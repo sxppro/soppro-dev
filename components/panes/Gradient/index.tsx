@@ -2,6 +2,7 @@ import GradientFactory from '@/utils/gradient';
 import { VStack } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import styles from './Gradient.module.css';
+import GradientOverlay from './GradientOverlay';
 
 const Gradient = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Gradient = () => {
   return (
     <VStack w={'full'} h={'100vh'}>
       <canvas id={'soppro-hero-gradient'} className={styles.gradient}></canvas>
+      <GradientOverlay />
     </VStack>
   );
 };
