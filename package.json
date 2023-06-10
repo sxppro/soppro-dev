@@ -12,12 +12,15 @@
     "@chakra-ui/react": "^2.7.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@react-three/fiber": "^8.13.1",
+    "@types/three": "^0.152.1",
     "@vercel/analytics": "^1.0.1",
     "framer-motion": "^10.12.16",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.9.0"
+    "react-icons": "^4.9.0",
+    "three": "^0.153.0"
   },
   "devDependencies": {
     "@types/node": "20.2.6",
@@ -26,6 +29,7 @@
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "eslint-config-prettier": "^8.8.0",
+    "glslify": "^7.1.1",
     "typescript": "5.1.3"
   }
 }
