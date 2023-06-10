@@ -1,7 +1,33 @@
-import { VStack } from '@chakra-ui/react';
+import { Center, Link, VStack } from '@chakra-ui/react';
+import NextLink from 'next/link';
+
+const links = [
+  {
+    label: 'Work',
+    to: '/work',
+  },
+  {
+    label: 'Contact',
+    to: '/contact',
+  },
+  {
+    label: 'About',
+    to: '/about',
+  },
+];
 
 const Directory = () => {
-  return <VStack w={'full'} h={'calc(100vh)'}></VStack>;
+  return (
+    <Center w={'full'} h={'100vh'} bg={'black'} p={12}>
+      <VStack w={'inherit'} alignItems={'flex-start'} spacing={8} px={6}>
+        {links.map((link) => (
+          <Link as={NextLink} key={link.label} href={link.to} fontSize={'6xl'}>
+            {link.label}
+          </Link>
+        ))}
+      </VStack>
+    </Center>
+  );
 };
 
 export default Directory;
