@@ -1,5 +1,7 @@
+import Name from '@/public/name.png';
 import { gascogne } from '@/utils/fonts';
-import { Center, Link, VStack } from '@chakra-ui/react';
+import { Box, Center, Link, Switch, VStack } from '@chakra-ui/react';
+import Image from 'next/image';
 import NextLink from 'next/link';
 
 const links = [
@@ -27,11 +29,22 @@ const Directory = () => {
       w={'full'}
       h={'100vh'}
       bg={'black'}
-      p={12}
+      px={16}
+      py={12}
       className={gascogne.className}
       flex={{ md: '0 50%' }}
+      flexDir={'column'}
+      justifyContent={'space-between'}
     >
-      <VStack w={'inherit'} alignItems={'flex-start'} spacing={8} px={6}>
+      <Box pos={'relative'} w={36} h={24} alignSelf={'flex-start'}>
+        <Image
+          src={Name}
+          alt={'Joshua Lu'}
+          fill
+          style={{ objectFit: 'cover' }}
+        />
+      </Box>
+      <VStack w={'inherit'} alignItems={'flex-start'} spacing={8}>
         {links.map((link) => (
           <Link
             as={NextLink}
@@ -44,6 +57,7 @@ const Directory = () => {
           </Link>
         ))}
       </VStack>
+      <Switch size="lg" />
     </Center>
   );
 };
