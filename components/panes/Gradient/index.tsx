@@ -2,7 +2,7 @@ import GradientFactory from '@/utils/gradient';
 import { VStack } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import styles from './Gradient.module.css';
-import GradientOverlay from './GradientOverlay';
+import GradientOverlay from './Overlay';
 
 const Gradient = () => {
   useEffect(() => {
