@@ -5,9 +5,13 @@ import Gradient from './panes/Gradient';
 
 const App: FC = () => {
   return (
-    <Flex direction={{ base: 'column', md: 'row' }}>
-      <Gradient />
-      <Directory />
+    <Flex
+      direction={{ base: 'column', md: 'row' }}
+      justify={{ md: 'flex-end' }}
+    >
+      <Gradient>
+        <Directory />
+      </Gradient>
     </Flex>
   );
 };

@@ -1,11 +1,11 @@
 import { Center } from '@chakra-ui/react';
 import AnimatedText from './AnimatedText';
 
-const GradientOverlay = () => {
+const Overlay = () => {
   return (
     <Center
-      w={'inherit'}
-      h={'inherit'}
+      w={'100vw'}
+      h={'100vh'}
       pos={'absolute'}
       zIndex={10}
       top={0}
@@ -16,4 +16,4 @@ const GradientOverlay = () => {
   );
 };
 
-export default GradientOverlay;
+export default Overlay;

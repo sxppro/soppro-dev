@@ -1,10 +1,10 @@
 import GradientFactory from '@/utils/gradient';
-import { VStack } from '@chakra-ui/react';
-import { useEffect } from 'react';
+import { chakra } from '@chakra-ui/react';
+import { PropsWithChildren, useEffect } from 'react';
 import styles from './Gradient.module.css';
-import GradientOverlay from './Overlay';
+import Overlay from './Overlay';
 
-const Gradient = () => {
+const Gradient = ({ children }: PropsWithChildren) => {
   useEffect(() => {
     const gradient = new GradientFactory();
     // @ts-expect-error: initGradient bubbles an event; it is not a method
@@ -15,10 +15,17 @@ const Gradient = () => {
   });
 
   return (
-    <VStack w={'full'} h={'100vh'}>
-      <canvas id={'soppro-hero-gradient'} className={styles.gradient}></canvas>
-      <GradientOverlay />
-    </VStack>
+    <>
+      <chakra.canvas
+        id={'soppro-hero-gradient'}
+        className={styles.gradient}
+        pos={{ md: 'fixed' }}
+        h={'100vh'}
+        zIndex={-1}
+      />
+      <Overlay />
+      {children}
+    </>
   );
 };
 

@@ -29,6 +29,7 @@ const Directory = () => {
       bg={'black'}
       p={12}
       className={gascogne.className}
+      flex={{ md: '0 50%' }}
     >
       <VStack w={'inherit'} alignItems={'flex-start'} spacing={8} px={6}>
         {links.map((link) => (
