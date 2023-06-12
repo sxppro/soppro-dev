@@ -4,11 +4,19 @@ import { PropsWithChildren, useEffect } from 'react';
 import styles from './Gradient.module.css';
 import Overlay from './Overlay';
 
+let loaded = false;
+
 const Gradient = ({ children }: PropsWithChildren) => {
   useEffect(() => {
     const gradient = new GradientFactory();
-    // @ts-expect-error: initGradient bubbles an event; it is not a method
-    gradient.initGradient('#soppro-hero-gradient');
+
+    // Gradient background will only be loaded once
+    if (!loaded) {
+      console.log('Gradient re-rendered');
+      // @ts-expect-error: initGradient bubbles an event; it is not a method
+      gradient.initGradient('#soppro-hero-gradient');
+      loaded = true;
+    }
     return () => {
       gradient && gradient.disconnect();
     };

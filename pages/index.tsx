@@ -1,8 +1,8 @@
+import Content from '@/components/panes/Content';
 import type { NextPage } from 'next';
-import App from '../components/App';
 
 const Home: NextPage = () => {
-  return <App />;
+  return <Content />;
 };
 
 export default Home;

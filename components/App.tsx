@@ -1,16 +1,12 @@
 import { Flex } from '@chakra-ui/react';
-import type { FC } from 'react';
-import Content from './panes/Content';
+import type { PropsWithChildren } from 'react';
 import Directory from './panes/Directory';
-import Gradient from './panes/Gradient';
 
-const App: FC = () => {
+const App = ({ children }: PropsWithChildren) => {
   return (
     <Flex direction={{ base: 'column', lg: 'row' }}>
-      <Gradient>
-        <Content />
-        <Directory />
-      </Gradient>
+      {children}
+      <Directory />
     </Flex>
   );
 };

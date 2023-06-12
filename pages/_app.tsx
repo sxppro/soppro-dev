@@ -1,4 +1,6 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import Directory from '@/components/panes/Directory';
+import Gradient from '@/components/panes/Gradient';
+import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -15,7 +17,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Component {...pageProps} />
+        <Gradient />
+        <Flex direction={{ base: 'column', lg: 'row' }}>
+          <Component {...pageProps} />
+          <Directory />
+        </Flex>
       </main>
       <Analytics />
     </ChakraProvider>
