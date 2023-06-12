@@ -9,7 +9,7 @@ const Overlay = () => {
       pos={'absolute'}
       zIndex={10}
       top={0}
-      hideFrom={'md'}
+      hideFrom={'lg'}
     >
       <AnimatedText />
     </Center>

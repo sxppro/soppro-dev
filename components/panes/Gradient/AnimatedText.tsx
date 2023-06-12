@@ -4,7 +4,7 @@ import { forwardRef, useEffect, useState } from 'react';
 
 const FIVE_SECONDS = 5000;
 
-const greetings = ['Hi', 'Bonjour', '你好', 'Yes'];
+const greetings = ['Hi', 'Bonjour', '你好', '侬好', 'こんにちは'];
 
 type TextProps = {
   greeting: string;

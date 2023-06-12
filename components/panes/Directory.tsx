@@ -36,7 +36,7 @@ const Directory = () => {
       py={12}
       className={gascogne.className}
       bg={transparent ? 'transparent' : 'black'}
-      flex={{ md: '0 50%' }}
+      flex={{ lg: '0 50%' }}
       flexDir={'column'}
       justifyContent={'space-between'}
       backdropFilter={'auto'}

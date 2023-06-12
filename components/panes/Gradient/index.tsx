@@ -19,7 +19,7 @@ const Gradient = ({ children }: PropsWithChildren) => {
       <chakra.canvas
         id={'soppro-hero-gradient'}
         className={styles.gradient}
-        pos={{ md: 'fixed' }}
+        pos={{ lg: 'fixed' }}
         h={'100vh'}
         zIndex={-1}
       />
