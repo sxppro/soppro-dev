@@ -17,7 +17,7 @@ const links = [
   },
   {
     label: 'Contact',
-    to: '/contact',
+    to: 'mailto:hello@soppro.dev',
   },
   {
     label: 'About',

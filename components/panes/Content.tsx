@@ -1,6 +1,7 @@
 import { Center } from '@chakra-ui/react';
+import { PropsWithChildren } from 'react';
 
-const Content = () => {
+const Content = ({ children }: PropsWithChildren) => {
   return (
     <Center
       w={'full'}
@@ -13,7 +14,9 @@ const Content = () => {
       backdropBlur={'sm'}
       boxShadow={'sm'}
       hideBelow={'lg'}
-    />
+    >
+      {children}
+    </Center>
   );
 };
 
