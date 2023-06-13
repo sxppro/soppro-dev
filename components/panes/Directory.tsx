@@ -66,7 +66,7 @@ const Directory = () => {
             as={NextLink}
             key={link.label}
             href={link.to}
-            fontSize={{ base: '5xl', md: '6xl' }}
+            fontSize={{ base: '4xl', md: '5xl' }}
             color={'white'}
           >
             {link.label}

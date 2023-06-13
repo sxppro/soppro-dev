@@ -9,13 +9,13 @@ import {
 
 const Work = () => {
   return (
-    <VStack spacing={6}>
+    <VStack spacing={8}>
       <Box>
         <Tag>July 2022 — July 2023</Tag>
-        <Heading fontSize={'2xl'}>
+        <Heading fontSize={'2xl'} py={2}>
           Software Engineer Intern · National Australia Bank
         </Heading>
-        <UnorderedList spacing={2}>
+        <UnorderedList spacing={1}>
           <ListItem>
             Progression and regression testing for business-critical
             microservices
@@ -35,8 +35,10 @@ const Work = () => {
 
       <Box>
         <Tag>January — June 2022</Tag>
-        <Heading fontSize={'2xl'}>Software Engineer · News Perform</Heading>
-        <UnorderedList spacing={2}>
+        <Heading fontSize={'2xl'} py={2}>
+          Software Engineer · News Perform
+        </Heading>
+        <UnorderedList spacing={1}>
           <ListItem>
             Wrote modern, performant, maintainable code across full-stack web
             applications

@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 const About: NextPage = () => {
   return (
     <AnimatedContent blur>
-      <Text>
+      <Text fontSize={'lg'}>
         Hello! My name is Josh and I enjoy designing &amp; creating things by
         typing letters and numbers! My interest in web development started in
         2021 when I decided to play around a UI library called{' '}
