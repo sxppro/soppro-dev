@@ -20,6 +20,7 @@ const Content = forwardRef<HTMLDivElement, ContentProps>(
         justifyContent={'center'}
         backdropFilter={blur ? 'auto' : 'none'}
         backdropBlur={blur ? 'sm' : 'none'}
+        backdropBrightness={blur ? '60%' : 'none'}
         hideBelow={'lg'}
       >
         {children}

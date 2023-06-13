@@ -2,7 +2,7 @@ import AnimatedContent from '@/components/Content';
 import Work from '@/components/panes/Work';
 import { NextPage } from 'next';
 
-const WorkPage: NextPage = () => {
+const ExperiencePage: NextPage = () => {
   return (
     <AnimatedContent blur>
       <Work />
@@ -10,4 +10,4 @@ const WorkPage: NextPage = () => {
   );
 };
 
-export default WorkPage;
+export default ExperiencePage;

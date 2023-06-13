@@ -1,10 +1,19 @@
 import Name from '@/public/name.png';
 import { gascogne } from '@/utils/fonts';
-import { Box, Center, IconButton, Link, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  ButtonGroup,
+  Center,
+  Flex,
+  IconButton,
+  Link,
+  Spacer,
+  VStack,
+} from '@chakra-ui/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { useState } from 'react';
-import { FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiEye, FiEyeOff, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const links = [
   {
@@ -12,12 +21,12 @@ const links = [
     to: '/',
   },
   {
-    label: 'Work',
-    to: '/work',
+    label: 'Experience',
+    to: '/experience',
   },
   {
-    label: 'Contact',
-    to: 'mailto:hello@soppro.dev',
+    label: 'Showcase',
+    to: '/showcase',
   },
   {
     label: 'About',
@@ -64,12 +73,42 @@ const Directory = () => {
           </Link>
         ))}
       </VStack>
-      <IconButton
-        icon={transparent ? <FiEyeOff /> : <FiEye />}
-        aria-label="Sidebar transparency toggle"
-        variant={'ghost'}
-        onClick={() => setTransparent(!transparent)}
-      />
+      <Flex w={'full'}>
+        <ButtonGroup
+          size={{ base: 'md', md: 'lg' }}
+          variant={'link'}
+          isAttached
+        >
+          <IconButton
+            as={NextLink}
+            aria-label="GitHub"
+            icon={<FiGithub />}
+            href={'https://github.com/sxppro'}
+            target="_blank"
+          />
+          <IconButton
+            as={NextLink}
+            aria-label="LinkedIn"
+            icon={<FiLinkedin />}
+            href={'https://www.linkedin.com/in/joshua-lu/'}
+            target="_blank"
+          />
+          <IconButton
+            as={NextLink}
+            aria-label="Email"
+            icon={<FiMail />}
+            href={'mailto:hello@soppro.dev'}
+          />
+        </ButtonGroup>
+        <Spacer />
+        <IconButton
+          icon={transparent ? <FiEyeOff /> : <FiEye />}
+          aria-label="Sidebar transparency toggle"
+          variant={'ghost'}
+          size={{ base: 'md', md: 'lg' }}
+          onClick={() => setTransparent(!transparent)}
+        />
+      </Flex>
     </Center>
   );
 };
