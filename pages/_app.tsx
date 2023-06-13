@@ -2,10 +2,11 @@ import Directory from '@/components/panes/Directory';
 import Gradient from '@/components/panes/Gradient';
 import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { Analytics } from '@vercel/analytics/react';
+import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
   return (
     <ChakraProvider>
       <Head>
@@ -17,9 +18,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Gradient />
         <Flex direction={{ base: 'column', lg: 'row' }}>
-          <Component {...pageProps} />
+          <Gradient />
+          <AnimatePresence mode="wait">
+            <Component {...pageProps} key={router.asPath} />
+          </AnimatePresence>
           <Directory />
         </Flex>
       </main>

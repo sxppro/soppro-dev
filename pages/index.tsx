@@ -1,8 +1,17 @@
-import Content from '@/components/panes/Content';
+import { Center } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
-  return <Content />;
+  return (
+    <Center
+      w={'full'}
+      h={'100vh'}
+      px={16}
+      py={12}
+      bg={'transparent'}
+      hideBelow={'lg'}
+    />
+  );
 };
 
 export default Home;
