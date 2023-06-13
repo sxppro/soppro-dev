@@ -1,4 +1,4 @@
-import AnimatedContent from '@/components/panes/Content';
+import AnimatedContent from '@/components/Content';
 import { Text } from '@chakra-ui/react';
 import { NextPage } from 'next';
 

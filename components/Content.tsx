@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { forwardRef, type PropsWithChildren } from 'react';
 
@@ -9,7 +9,7 @@ type ContentProps = PropsWithChildren & {
 const Content = forwardRef<HTMLDivElement, ContentProps>(
   ({ blur, children }, ref) => {
     return (
-      <Center
+      <Flex
         ref={ref}
         w={'full'}
         h={'100vh'}
@@ -17,13 +17,13 @@ const Content = forwardRef<HTMLDivElement, ContentProps>(
         py={12}
         bg={'transparent'}
         flexDir={'column'}
+        justifyContent={'center'}
         backdropFilter={blur ? 'auto' : 'none'}
         backdropBlur={blur ? 'sm' : 'none'}
-        boxShadow={blur ? 'sm' : 'none'}
         hideBelow={'lg'}
       >
         {children}
-      </Center>
+      </Flex>
     );
   }
 );
