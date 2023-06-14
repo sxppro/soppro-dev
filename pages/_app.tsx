@@ -1,5 +1,6 @@
 import Directory from '@/components/panes/Directory';
 import Gradient from '@/components/panes/Gradient';
+import theme from '@/utils/theme';
 import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { Analytics } from '@vercel/analytics/react';
 import { AnimatePresence } from 'framer-motion';
@@ -8,7 +9,7 @@ import Head from 'next/head';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Head>
         <title>Soppro</title>
         <meta

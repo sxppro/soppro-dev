@@ -1,6 +1,6 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, useColorMode } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { forwardRef, type PropsWithChildren } from 'react';
+import { forwardRef, useEffect, type PropsWithChildren } from 'react';
 
 type ContentProps = PropsWithChildren & {
   blur?: boolean;
@@ -8,6 +8,12 @@ type ContentProps = PropsWithChildren & {
 
 const Content = forwardRef<HTMLDivElement, ContentProps>(
   ({ blur, children }, ref) => {
+    const { colorMode, toggleColorMode } = useColorMode();
+
+    useEffect(() => {
+      colorMode === 'light' ? toggleColorMode() : '';
+    }, [colorMode, toggleColorMode]);
+
     return (
       <Flex
         ref={ref}
