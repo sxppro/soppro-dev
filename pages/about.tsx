@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 const About: NextPage = () => {
   return (
     <AnimatedContent blur>
-      <VStack spacing={3}>
+      <VStack spacing={3} alignItems={'flex-start'}>
         <Text fontSize={'lg'}>
           Heya! I&apos;m Josh and I enjoy designing &amp; creating things by
           typing letters and numbers!{' '}
