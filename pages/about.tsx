@@ -1,17 +1,22 @@
 import AnimatedContent from '@/components/Content';
-import { Text } from '@chakra-ui/react';
+import { Link, Text, VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 const About: NextPage = () => {
   return (
     <AnimatedContent blur>
-      <Text fontSize={'lg'}>
-        Hello! My name is Josh and I enjoy designing &amp; creating things by
-        typing letters and numbers! My interest in web development started in
-        2021 when I decided to play around a UI library called{' '}
-        <a href="https://chakra-ui.com/">Chakra</a>. Building things with a UI
-        library taught me a lot about web applications!
-      </Text>
+      <VStack spacing={3}>
+        <Text fontSize={'lg'}>
+          Heya! I&apos;m Josh and I enjoy designing &amp; creating things by
+          typing letters and numbers!{' '}
+        </Text>
+        <Text fontSize={'lg'}>
+          My interest in web development started in 2021 when I decided to play
+          around a UI library called{' '}
+          <Link href="https://chakra-ui.com/">Chakra</Link>. Building things
+          with a UI library taught me a lot about web applications!
+        </Text>
+      </VStack>
     </AnimatedContent>
   );
 };

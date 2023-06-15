@@ -29,7 +29,9 @@ const Content = forwardRef<HTMLDivElement, ContentProps>(
         backdropBrightness={blur ? '60%' : 'none'}
         hideBelow={'lg'}
       >
-        {children}
+        <Flex flexDir={'column'} maxW={'container.md'} alignSelf={'center'}>
+          {children}
+        </Flex>
       </Flex>
     );
   }
