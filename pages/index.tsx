@@ -1,8 +1,17 @@
+import { Center } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import App from '../components/App';
 
 const Home: NextPage = () => {
-  return <App />;
+  return (
+    <Center
+      w={'full'}
+      h={'100vh'}
+      px={16}
+      py={12}
+      bg={'transparent'}
+      hideBelow={'lg'}
+    />
+  );
 };
 
 export default Home;
