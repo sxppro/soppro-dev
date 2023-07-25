@@ -2,7 +2,7 @@ import { Heading } from '@chakra-ui/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { forwardRef, useEffect, useState } from 'react';
 
-const FIVE_SECONDS = 5000;
+const THREE_SECONDS = 3000;
 
 const greetings = ['Hi', 'Bonjour', '你好', '侬好', 'こんにちは'];
 
@@ -32,7 +32,7 @@ const AnimatedText = () => {
     const interval = setInterval(() => {
       index === greetings.length - 1 ? setIndex(0) : setIndex(index + 1);
       setGreeting(greetings[index]);
-    }, FIVE_SECONDS);
+    }, THREE_SECONDS);
     return () => clearInterval(interval);
   });
   return (
