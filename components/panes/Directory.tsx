@@ -100,8 +100,9 @@ const Directory = () => {
             href={'mailto:hello@soppro.dev'}
           />
         </ButtonGroup>
-        <Spacer />
+        <Spacer display={{ base: 'none', md: 'inherit' }} />
         <IconButton
+          display={{ base: 'none', md: 'inherit' }}
           icon={transparent ? <FiEyeOff /> : <FiEye />}
           aria-label="Sidebar transparency toggle"
           variant={'ghost'}
