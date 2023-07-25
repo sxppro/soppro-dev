@@ -18,16 +18,16 @@ const Content = forwardRef<HTMLDivElement, ContentProps>(
       <Flex
         ref={ref}
         w={'full'}
-        h={'100vh'}
-        px={16}
-        py={12}
+        minH={'100vh'}
+        px={{ base: 12, md: 16 }}
+        py={{ base: 6, md: 12 }}
         bg={'transparent'}
         flexDir={'column'}
         justifyContent={'center'}
         backdropFilter={blur ? 'auto' : 'none'}
         backdropBlur={blur ? 'sm' : 'none'}
         backdropBrightness={blur ? '60%' : 'none'}
-        hideBelow={'lg'}
+        pos={{ base: 'absolute', md: 'inherit' }}
       >
         <Flex flexDir={'column'} maxW={'container.md'} alignSelf={'center'}>
           {children}

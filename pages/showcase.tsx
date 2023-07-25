@@ -10,7 +10,7 @@ const ShowcasePage: NextPage = () => {
         <Heading>Work in progress!</Heading>
         <Text fontSize={'lg'}>
           In the meantime, check out my projects over{' '}
-          <Link href="https://soppro.dev/#projects" isExternal>
+          <Link href="https://alpha.soppro.dev/#projects" isExternal>
             here
             <FiExternalLink
               style={{ display: 'inline-block', marginLeft: '0.25em' }}

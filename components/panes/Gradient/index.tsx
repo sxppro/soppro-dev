@@ -1,5 +1,6 @@
 import GradientFactory from '@/utils/gradient';
 import { chakra } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { PropsWithChildren, useEffect } from 'react';
 import styles from './Gradient.module.css';
 import Overlay from './Overlay';
@@ -7,6 +8,8 @@ import Overlay from './Overlay';
 let loaded = false;
 
 const Gradient = ({ children }: PropsWithChildren) => {
+  const router = useRouter();
+
   useEffect(() => {
     const gradient = new GradientFactory();
 
@@ -28,10 +31,10 @@ const Gradient = ({ children }: PropsWithChildren) => {
         id={'soppro-hero-gradient'}
         className={styles.gradient}
         pos={{ lg: 'fixed' }}
-        h={'100vh'}
+        minH={'100vh'}
         zIndex={-1}
       />
-      <Overlay />
+      {router.pathname === '/' && <Overlay />}
       {children}
     </>
   );
