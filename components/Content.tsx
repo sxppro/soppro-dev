@@ -29,7 +29,12 @@ const Content = forwardRef<HTMLDivElement, ContentProps>(
         backdropBrightness={blur ? '60%' : 'none'}
         pos={{ base: 'absolute', md: 'inherit' }}
       >
-        <Flex flexDir={'column'} maxW={'container.md'} alignSelf={'center'}>
+        <Flex
+          flexDir={'column'}
+          maxW={'container.md'}
+          alignSelf={'center'}
+          w={'inherit'}
+        >
           {children}
         </Flex>
       </Flex>
