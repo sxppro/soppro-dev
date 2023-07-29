@@ -32,6 +32,7 @@ const Gradient = ({ children }: PropsWithChildren) => {
         className={styles.gradient}
         pos={{ lg: 'fixed' }}
         minH={'100vh'}
+        w={'100vw'}
         zIndex={-1}
       />
       {router.pathname === '/' && <Overlay />}

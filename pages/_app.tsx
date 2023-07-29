@@ -22,11 +22,9 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
       </style>
       <ChakraProvider theme={theme}>
         <Head>
-          <title>Soppro</title>
-          <meta
-            name="description"
-            content="Soppro's personal website - enjoy :)"
-          />
+          <title>Joshua Lu</title>
+          <meta name="description" content="Josh's personal website :)" />
+          <meta name="theme-color" content="#000000" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
