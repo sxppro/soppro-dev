@@ -18,6 +18,7 @@ const Content = forwardRef<HTMLDivElement, ContentProps>(
       <Flex
         ref={ref}
         w={'full'}
+        maxW={{ lg: '50%' }}
         minH={'100vh'}
         px={{ base: 12, md: 16 }}
         py={{ base: 6, md: 12 }}
