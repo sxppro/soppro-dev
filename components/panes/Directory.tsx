@@ -26,7 +26,8 @@ const links = [
   },
   {
     label: 'Showcase',
-    to: '/showcase',
+    to: 'https://read.cv/jplu',
+    newTab: true,
   },
   {
     label: 'About',
@@ -61,15 +62,16 @@ const Directory = () => {
         />
       </Box>
       <VStack w={'inherit'} alignItems={'flex-start'} spacing={8}>
-        {links.map((link) => (
+        {links.map(({ label, to, newTab }) => (
           <Link
             as={NextLink}
-            key={link.label}
-            href={link.to}
+            key={label}
+            href={to}
             fontSize={{ base: '4xl', md: '5xl' }}
             color={'white'}
+            target={newTab ? '_blank' : '_self'}
           >
-            {link.label}
+            {label}
           </Link>
         ))}
       </VStack>
